@@ -17,14 +17,30 @@ import cookie from 'js-cookie';
 
 
 export default class Login extends Component {
+  constructor(...args) {
+    super(...args);
+    this.state= { user: [] };
+  }
+
 	
 
 
 	dataHandler(data) {
-    let { info } = this.props.params;
-    info.push(data.info);
+  console.log(data) 
+
+    let { users } = this.props.params;
+    ajax({
+    url: 'http://mudr.herokuapp.com/sign_up',
+    type: 'POST',
+    data: data,
+    dataType: 'json',
+    processData: false,
+    contentType: false
+  }).then(() => {
+    users.push(data.users);
     hashHistory.push('/');
-  }
+  })
+}
   
 	
 
@@ -63,7 +79,7 @@ export default class Login extends Component {
             <input name="mood" placeholder="Mood (1-5)" type="number"/>
           </div>
           <div>
-            <input name="img" placeholder="Photo" type="text"/>
+            <input name="avatar" placeholder="Photo" type="text"/>
           </div>
           <button>Sign In</button>
         </SSF>
