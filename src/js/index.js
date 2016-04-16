@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { hashHistory, Router, Route, IndexRoute } from 'react-router';
 import MainComponent from './maincomponent';
 import Login from './login';
+import NewUser from './newuser';
 import Leaderboard from './leaderboard';
 import Storyboard from './storyboard';
 import Dashboard from './dashboard';
@@ -34,7 +35,7 @@ function loginEnter(state, replace) {
  render((
    <Router history={hashHistory}>
      <Route path="/" component={MainComponent}>
-       <IndexRoute component={Login}/>
+       <IndexRoute component={NewUser}/>
        <Route path="/dashboard" component={Dashboard}/>
        <Route path="/stories" component={Storyboard}/>
       </Route>

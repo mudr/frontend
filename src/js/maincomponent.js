@@ -25,6 +25,8 @@ export default class MainComponent extends Component {
 
 				</div>
 
+				{this.props.children}
+
 
 			</div>
 

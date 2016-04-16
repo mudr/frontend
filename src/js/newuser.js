@@ -7,12 +7,13 @@ import { hashHistory } from 'react-router';
 import cookie from 'js-cookie';
 
 
-const style = {
-  height: 100,
-  width: 100,
-  margin: 20,
-  textAlign: 'center',
-  display: 'inline-block',
+// const style = {
+//   height: 100,
+//   width: 100,
+//   margin: 20,
+//   textAlign: 'center',
+//   display: 'inline-block',
+// }
 
 
 export default class Login extends Component {
@@ -45,9 +46,9 @@ export default class Login extends Component {
 
 	render() {
     return (
-      <div>
+      <div className="newuser-wrapper">
         <h1>Sign In</h1>
-        <SerialForm onData={::
+        <SSF onData={::
           this.dataHandler}>
           <div>
             <input name="user" placeholder="Username" type="text"/>
@@ -65,7 +66,7 @@ export default class Login extends Component {
             <input name="img" placeholder="Photo" type="text"/>
           </div>
           <button>Sign In</button>
-        </SerialForm>
+        </SSF>
       </div>
     )
   }
@@ -80,6 +81,6 @@ export default class Login extends Component {
 
 // </SSF>
 
-			)
+			
 	}
-}
+
