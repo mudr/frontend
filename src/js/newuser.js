@@ -23,12 +23,13 @@ export default class Login extends Component {
   }
 
 	
-
+   dropHandler([file]) {
+    this.setState({preview: file.preview});
+  }
 
 	dataHandler(data) {
-  console.log(data) 
+    console.log('data', data) 
 
-    let { users } = this.props.params;
     ajax({
     url: 'http://mudr.herokuapp.com/sign_up',
     type: 'POST',
@@ -64,24 +65,27 @@ export default class Login extends Component {
     return (
       <div className="newuser-wrapper">
         <h1>Sign In</h1>
-        <SSF onData={::
-          this.dataHandler}>
+        <SSF onData={this.dataHandler}>
           <div>
             <input name="user" placeholder="Username" type="text"/>
           </div>
           <div>
-            <input name="pass" placeholder="Password" type="password"/>
+            <input name="password" placeholder="Password" type="password"/>
           </div>
           <div>
             <input name="email" placeholder="Email" type="text"/>
           </div>
           <div>
-            <input name="mood" placeholder="Mood (1-5)" type="number"/>
+            <input name="mood" placeholder="Mood (1 or 2)" type="number"/>
           </div>
           <div>
-            <input name="avatar" placeholder="Photo" type="text"/>
+            <Dropzone onDrop={::this.dropHandler}>
+              Drop Picture Here
+              <input type="hidden" name="photo" value={this.state.preview}/>
+              <img src={this.state.preview}/>
+            </Dropzone>
           </div>
-          <button>Sign In</button>
+           <button>Sign In</button>
         </SSF>
       </div>
     )
