@@ -5,6 +5,7 @@ import { ajax } from 'jquery';
 import Paper from 'material-ui/lib/paper';
 import { hashHistory } from 'react-router';
 import cookie from 'js-cookie';
+import Dropzone from 'react-dropzone';
 
 
 // const style = {
