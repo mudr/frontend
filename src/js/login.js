@@ -51,6 +51,7 @@ export default class Login extends Component {
 		       	}
 		     	});
 				 	cookie.set('user', resp.user);
+				 	//cookie.set('auth_token', response.user.auth_token);
 			 		hashHistory.replace("/dashboard");
 			 	} else {
 			 		alert('Please Try Again or Create an Account');
@@ -101,7 +102,7 @@ export default class Login extends Component {
 
 	render() {
     return (
-      <div>
+      <div className="login-wrapper">
         <h1>Sign In</h1>
         <SSF onData={this.dataHandler}>
           <div>
@@ -113,9 +114,13 @@ export default class Login extends Component {
           <div>
             <input name="mood" placeholder="Mood (1-2)" type="number"/>
           </div>
-          <button>Sign In</button>
+          <button className="login-button-1">Sign In</button>
         </SSF>
+<<<<<<< HEAD
         <Link to="/newuser">Sign Up</Link>
+=======
+        <Link to="/newuser"><button className="login-button-2">New Users</button></Link>
+>>>>>>> a45ef0cafeece837d6c5fadea2b03e57dad8dc95
       </div>
     )
   }

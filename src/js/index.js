@@ -36,11 +36,18 @@ function loginEnter(state, replace) {
    <Router history={hashHistory}>
      <Route path="/" component={MainComponent}>
        <IndexRoute component={Login}/>
+       <Route path="/newuser" component={NewUser}/>
        <Route path="/dashboard" component={Dashboard}/>
        <Route path="/storyboard" component={Storyboard}/>
+<<<<<<< HEAD
       </Route>
       	<Route path="/dashboard" component={Dashboard}/>
        <Route path="/submission" component={Submission}/>
+=======
+       <Route path="/submission" component={Submission}/>
+      </Route>
+        <Route path="/dashboard" component={Dashboard}/>
+>>>>>>> a45ef0cafeece837d6c5fadea2b03e57dad8dc95
        <Route path="/storyboard" component={Storyboard}/>
       </Router>
  ), document.querySelector('.app'));

@@ -3,7 +3,7 @@
 
 
 $salmon: #FF4D2C;	
-
+$slate:  #7CB7C0;
 
 @mixin gradient(){
 	background: -moz-linear-gradient(left,  rgba(255,77,44,1) 0%, rgba(162,162,162,0.63) 50%, rgba(0,218,244,0.25) 100%); /* FF3.6-15 */
@@ -14,9 +14,36 @@ $salmon: #FF4D2C;
 }
 
 
+@mixin login-box(){
+	position:relative;
+	width:500px;
+	height:400px;
+	margin:auto;
+	border:1px solid black;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-top: 120px;
+	padding-left: 20px;
+}
+
+
+@mixin button(){
+	background-color: transparent;
+	border-radius: 5px;
+}
+
+// @mixin button-hover(){
+// 	color:$slate;
+// }
+
+
+
+// -----------------------------/////////////////
+
+
 
 .app{
 	box-sizing:border-box;
+
 }
 
 
@@ -72,14 +99,7 @@ $salmon: #FF4D2C;
 
 
 .newuser-wrapper{
-	position:relative;
-	width:500px;
-	height:400px;
-	margin:auto;
-	border:1px solid black;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin-top: 120px;
-	padding-left: 20px;
+	@include login-box;
 }
 
 
@@ -94,12 +114,11 @@ $salmon: #FF4D2C;
 	position:absolute;
 	bottom: 20px;
 	right: 45px;
-	background-color: transparent;
-	border-radius: 5px;
+	@include button;
 }
 
 .newuser-wrapper button:hover{
-	color: #7CB7C0;
+	color:$slate;
 }
 
 
@@ -116,13 +135,97 @@ $salmon: #FF4D2C;
 }
 
 .dropzone:hover {
-	color:#7CB7C0;
+	color:$slate;
 }
 
 
 .dropzone input {
 	background-color: white;
 }
+
+
+
+//////////LOGIN -- RETURNING USER//////////--------------
+
+
+
+.login-wrapper{
+	@include login-box;
+
+}
+
+
+.login-wrapper input{
+	margin-bottom:15px;
+	width:90%;
+
+}
+
+.login-button-2{
+	position:absolute;
+	bottom: 20px;
+	right: 45px;
+	@include button;
+	
+}
+
+.login-button-2:hover{
+	color: $slate;
+}
+
+.login-button-1{
+	position:absolute;
+	bottom: 180px;
+	right: 45px;
+	@include button;
+	
+}
+
+.login-button-1:hover{
+	color:$slate;
+}
+
+
+//////////SUBMIT YOUR SAD STORY//////////--------------
+
+
+.submit-story-wrapper{
+	position:relative;
+	width:500px;
+	height:600px;
+	margin:auto;
+	// background-color: $slate;
+	// border:1px solid black;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-top: 120px;
+	padding-left: 20px;
+	padding-top:10px;
+
+}
+
+.submit-content input{
+	padding-bottom: 200px;
+	width: 90%;
+	margin-bottom: 20px;
+}
+
+.submit-title input{
+	width: 90%;
+	margin-bottom: 20px;
+
+}
+
+
+.submit-story-wrapper button{
+	@include button;
+}
+
+.submit-story-wrapper button:hover{
+	color:$slate;
+}
+
+
+
 
 
 
