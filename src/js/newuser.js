@@ -76,7 +76,7 @@ export default class Login extends Component {
 	render() {
     return (
       <div className="newuser-wrapper">
-        <h1>Sign In</h1>
+        <h1>Sign Up</h1>
         <SSF onData={::this.dataHandler}>
           <div>
             <input name="username" placeholder="Username" type="text"/>
@@ -99,7 +99,7 @@ export default class Login extends Component {
             </Dropzone>
           </div>
 
-           <button><b>Sign In</b></button>
+           <button><b>Submit</b></button>
         </SSF>
       </div>
     )
