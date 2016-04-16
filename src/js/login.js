@@ -47,11 +47,11 @@ export default class Login extends Component {
 	       	// loggedInUser = resp.user;
 	        ajaxSetup({
 	          headers: {
-	        	  'X-Access-Token': resp.user.access_token
+	        	  'X-Auth-Token': resp.user.auth_token
 		       	}
 		     	});
 				 	cookie.set('user', resp.user);
-				 	//cookie.set('auth_token', response.user.auth_token);
+				 	cookie.set('auth_token', resp.user.auth_token);
 			 		hashHistory.replace("/dashboard");
 			 	} else {
 			 		alert('Please Try Again or Create an Account');
