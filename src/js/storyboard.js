@@ -6,7 +6,7 @@ import { ajax } from 'jquery';
 export default class Storyboard extends Component {
 	constructor (...args) {
 		super(...args);
-		this.state {}
+		// this.state { user: {} }
 	}
 
 
@@ -19,25 +19,52 @@ export default class Storyboard extends Component {
  		render () {
 		return(
 			<div className="storyboard-wrapper">
-				<div className="main-body-div">
-					<h3>Take in Dem' Good 
+				<div className="storyboard-main">
+					<h3>Mudr StoryBoard World</h3>
+
+					<div className="story-box">
+						<div className="story-box-title"> Story Title</div>
+						<div className="story-box-title">
+
+							Four dollar toast gastropub etsy, 
+							tattooed franzen deep v yuccie mumblecore 
+							schlitz cardigan meggings. Locavore selfies 
+							blog farm-to-table, vinyl you probably haven't 
+							heard of them vice chia gluten-free trust fund 
+							pork belly williamsburg.
+
+						</div>
+					</div>
 
 
+				<div className="leaderboard">
+					<h3>leaderboard</h3>
 
 
-
-
-
+					<ul>
+					<li><span>username1</span><p>score 100</p></li>
+					<li><span>username2</span><p>score 90</p></li>
+					<li><span>username3</span><p>score 80</p></li>
+					<li><span>username4</span><p>score 70</p></li>
+					<li><span>username5</span><p>score 60</p></li>
+					<li><span>username6</span><p>score 50</p></li>
+					<li><span>username7</span><p>score 40</p></li>
+					<li><span>username8</span><p>score 30</p></li>
+					<li><span>username9</span><p>score 20</p></li>
+					<li><span>username10</span><p>score 10</p></li>
+					</ul>
 
 
 
 			</div>
+		</div>
+	</div>
 
 
 
 
 
 
-	// 		)
-	// }
+			)
+	}
 }
