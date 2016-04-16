@@ -21,9 +21,10 @@ export default class MainComponent extends Component {
 						<div className="main-username">username</div>
 						<div className="main-points">points</div>
 					</div>
-
+					<br/>
 
 				</div>
+					<div className="gradient-border">  </div>
 
 				{this.props.children}
 

@@ -90,14 +90,16 @@ export default class Login extends Component {
           <div>
             <input name="mood" placeholder="Mood (1 or 2)" type="number"/>
           </div>
+
           <div>
-            <Dropzone onDrop={::this.dropHandler}>
-              Drop Picture Here
+            <Dropzone className="dropzone" onDrop={::this.dropHandler}>
+              <span>Drop <b>image</b> Here <br/> or click to add</span>
               <input type="hidden" name="photo" value={this.state.preview}/>
               <img src={this.state.preview}/>
             </Dropzone>
           </div>
-           <button>Sign In</button>
+
+           <button><b>Sign In</b></button>
         </SSF>
       </div>
     )

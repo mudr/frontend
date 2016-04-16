@@ -2,6 +2,18 @@
 
 
 
+$salmon: #FF4D2C;	
+
+
+@mixin gradient(){
+	background: -moz-linear-gradient(left,  rgba(255,77,44,1) 0%, rgba(162,162,162,0.63) 50%, rgba(0,218,244,0.25) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(255,77,44,1) 0%,rgba(162,162,162,0.63) 50%,rgba(0,218,244,0.25) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(255,77,44,1) 0%,rgba(162,162,162,0.63) 50%,rgba(0,218,244,0.25) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4d2c', endColorstr='#4000daf4',GradientType=1 ); /* IE6-9 */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 
 .app{
 	box-sizing:border-box;
@@ -17,11 +29,10 @@
 	box-sizing:border-box;
 	width:100vw;
 	height:40px;
-	background-color:#db2616;
-	border-bottom:2px solid black;
-	padding-left:10px;
-	padding-right:10px;
+	background-color:white;
+	// border-bottom:4px solid black;
 	z-index:1;
+
 }
 
 
@@ -38,12 +49,22 @@
 
 .main-points{
 	padding-left:20px;
+	padding-right:10px;
 }
 
 .logo{
+	color: $salmon;
+	padding-left:10px;
 	padding-top:5px;
 	font-family: 'Grand Hotel', cursive;
 	font-size: 28px;
+}
+
+
+.gradient-border{
+	width:100%;
+	height:10px;
+	@include gradient;
 }
 
 //////////NEWUSER//////////--------------
@@ -57,9 +78,8 @@
 	margin:auto;
 	border:1px solid black;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin-top: 100px;
+	margin-top: 120px;
 	padding-left: 20px;
-	// padding-right:20px;
 }
 
 
@@ -72,15 +92,37 @@
 
 .newuser-wrapper button{
 	position:absolute;
-	bottom: 30px;
-	right: 50px;
+	bottom: 20px;
+	right: 45px;
 	background-color: transparent;
+	border-radius: 5px;
 }
-//.dropzone img {
-	//object-fit: fill;
 
-//}
+.newuser-wrapper button:hover{
+	color: #7CB7C0;
+}
 
+
+.dropzone {
+	padding-top: 25px;
+	width: 91%;
+	height:70px;
+	border:1px dotted black;
+	border-radius: 5px;
+	text-align: center;
+	// padding-top: 35px;
+	// object-fit: fill;
+
+}
+
+.dropzone:hover {
+	color:#7CB7C0;
+}
+
+
+.dropzone input {
+	background-color: white;
+}
 
 
 
