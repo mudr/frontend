@@ -35,7 +35,7 @@ function loginEnter(state, replace) {
  render((
    <Router history={hashHistory}>
      <Route path="/" component={MainComponent}>
-       <IndexRoute component={NewUser}/>
+       <IndexRoute component={Login}/>
        <Route path="/dashboard" component={Dashboard}/>
        <Route path="/stories" component={Storyboard}/>
       </Route>
