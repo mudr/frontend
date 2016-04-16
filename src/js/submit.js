@@ -6,14 +6,14 @@ import { ajax } from 'jquery';
 import cookie from 'js-cookie';
   
   
- 	let currentuser = cookie.getJSON('user');
+  
+ 	let currentuser = cookie.get('user');
   
  export default class Submission extends Component {
  	
   
  	
  	  dataHandler(data) {
-  
  	// onData() write Dat function
   
     		ajax({
@@ -22,7 +22,7 @@ import cookie from 'js-cookie';
         		data: data,
  	       	dataType: 'json',
  	       	headers: {
- 	        	  'X-Access-Token': currentuser.auth_token
+ 	        	  'X-Auth-Token': currentuser.auth_token
  		       	}
 	    	}).then( () => {
 	    	hashHistory.replace("/storyboard");
