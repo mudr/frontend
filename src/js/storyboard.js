@@ -35,29 +35,25 @@ export default class Storyboard extends Component {
 
 						</div>
 					</div>
+				</div>
 
 
 				<div className="leaderboard">
-					<h3>leaderboard</h3>
+					<h3>leaderboard </h3>
 
 
 					<ul>
-					<li><span>username1</span><p>score 100</p></li>
-					<li><span>username2</span><p>score 90</p></li>
-					<li><span>username3</span><p>score 80</p></li>
-					<li><span>username4</span><p>score 70</p></li>
-					<li><span>username5</span><p>score 60</p></li>
-					<li><span>username6</span><p>score 50</p></li>
-					<li><span>username7</span><p>score 40</p></li>
-					<li><span>username8</span><p>score 30</p></li>
-					<li><span>username9</span><p>score 20</p></li>
-					<li><span>username10</span><p>score 10</p></li>
+					<li><span>username2 score 90</span></li>
+					<li><span>username2 score 90</span></li>
+					<li><span>username2 score 90</span></li>
+					<li><span>username2 score 90</span></li>
+					<li><span>username2 score 90</span></li>
+
 					</ul>
 
 
 
 			</div>
-		</div>
 	</div>
 
 
@@ -68,3 +64,11 @@ export default class Storyboard extends Component {
 			)
 	}
 }
+					// <li><span>username3</span><p>score 80</p></li>
+					// <li><span>username4</span><p>score 70</p></li>
+					// <li><span>username5</span><p>score 60</p></li>
+					// <li><span>username6</span><p>score 50</p></li>
+					// <li><span>username7</span><p>score 40</p></li>
+					// <li><span>username8</span><p>score 30</p></li>
+					// <li><span>username9</span><p>score 20</p></li>
+					// <li><span>username10</span><p>score 10</p></li>

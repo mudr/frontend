@@ -103,7 +103,7 @@ export default class Login extends Component {
 	render() {
     return (
       <div className="login-wrapper">
-        <h1>Sign In</h1>
+        <h1>Log In</h1>
         <SSF onData={this.dataHandler}>
           <div>
             <input name="user" placeholder="Username" type="text"/>

@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { hashHistory } from 'react-router';
 import SSF from 'react-simple-serial-form';
 import { ajax } from 'jquery';
+import cookie from 'js-cookie';
   
   
  	let currentuser = cookie.getJSON('user');
@@ -47,7 +48,7 @@ import { ajax } from 'jquery';
          
           		 <button>Submit Your Story</button>
  
-        		   </SSF>
+        		 </SSF>
  
  
       		 </div>
