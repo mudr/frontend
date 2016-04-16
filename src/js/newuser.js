@@ -20,6 +20,7 @@ export default class Login extends Component {
 
 
 	dataHandler(data) {
+    let { info } = this.props.params;
     info.push(data.info);
     hashHistory.push('/');
   }
@@ -56,6 +57,12 @@ export default class Login extends Component {
           </div>
           <div>
             <input name="email" placeholder="Email" type="text"/>
+          </div>
+          <div>
+            <input name="mood" placeholder="Mood (1-5)" type="number"/>
+          </div>
+          <div>
+            <input name="img" placeholder="Photo" type="text"/>
           </div>
           <button>Sign In</button>
         </SerialForm>

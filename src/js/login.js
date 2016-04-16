@@ -58,6 +58,9 @@ export default class Login extends Component {
           <div>
             <input name="pass" placeholder="Password" type="password"/>
           </div>
+          <div>
+            <input name="mood" placeholder="Mood (1-5)" type="number"/>
+          </div>
           <button>Sign In</button>
         </SerialForm>
         <button> Sign Up </button>
