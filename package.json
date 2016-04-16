@@ -32,7 +32,12 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "material-ui": "^0.14.4",
+    "normalize-css": "^2.3.1",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-router": "^2.2.4",
+    "react-simple-serial-form": "^1.0.0",
+    "react-tap-event-plugin": "^1.0.0"
   }
 }
