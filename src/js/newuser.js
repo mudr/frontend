@@ -26,16 +26,27 @@ export default class Login extends Component {
 	
    dropHandler([file]) {
     this.setState({preview: file.preview});
+    this.file = file;
   }
 
 	dataHandler(data) {
     console.log('data', data) 
 
+    let formData = new FormData();
+
+    // console.log
+
+    formData.append('avatar', this.file),
+    formData.append('email', data.email),
+    formData.append('password', data.password),
+    formData.append('username', data.username),
+    formData.append('mood', data.mood)
+
     ajax({
     url: 'http://mudr.herokuapp.com/sign_up',
     type: 'POST',
-    data: data,
-    dataType: 'json',
+    data: formData,
+    dataType: 'application/json',
     processData: false,
     contentType: false
   }).then(() => {
@@ -66,9 +77,9 @@ export default class Login extends Component {
     return (
       <div className="newuser-wrapper">
         <h1>Sign In</h1>
-        <SSF onData={this.dataHandler}>
+        <SSF onData={::this.dataHandler}>
           <div>
-            <input name="user" placeholder="Username" type="text"/>
+            <input name="username" placeholder="Username" type="text"/>
           </div>
           <div>
             <input name="password" placeholder="Password" type="password"/>
