@@ -116,11 +116,9 @@ export default class Login extends Component {
           </div>
           <button className="login-button-1">Sign In</button>
         </SSF>
-<<<<<<< HEAD
-        <Link to="/newuser">Sign Up</Link>
-=======
+
         <Link to="/newuser"><button className="login-button-2">New Users</button></Link>
->>>>>>> a45ef0cafeece837d6c5fadea2b03e57dad8dc95
+
       </div>
     )
   }
