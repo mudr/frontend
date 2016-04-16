@@ -13,12 +13,14 @@ export default class MainComponent extends Component {
 				<div className="main-flex">
 
 					<div className="logo">
-						<img src="http://fillmurray.com/50/50" alt="logo"/>
+						<span> LOGO </span>
 					</div>
 
-					<div className="main-username">username</div>
 
-					<div className="main-points">points</div>
+					<div className="username-password">
+						<div className="main-username">username</div>
+						<div className="main-points">points</div>
+					</div>
 
 
 				</div>

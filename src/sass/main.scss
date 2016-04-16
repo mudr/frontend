@@ -1,5 +1,43 @@
-/* CSS Entry Point */
+@import 'normalize-css/normalize';
 
-// Turn on freq used libraries
-// @import 'normalize-css/normalize';
-// @import 'font-awesome/scss/font-awesome';
+
+
+
+.app{
+	box-sizing:border-box;
+}
+
+
+
+
+//////////MAIN COMPONENT//////////--------------
+
+
+.main-wrapper{
+	box-sizing:border-box;
+	width:100vw;
+	height:40px;
+	background-color:#db2616;
+	border-bottom:2px solid black;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+.main-flex{
+	display:flex;
+}
+
+.username-password{
+	width:100%;
+	display:flex;
+	justify-content:flex-end;
+}
+
+
+//////////NEWUSER//////////--------------
+
+
+
+

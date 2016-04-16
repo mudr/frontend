@@ -4,9 +4,10 @@ import { hashHistory, Router, Route, IndexRoute } from 'react-router';
 import MainComponent from './maincomponent';
 import Login from './login';
 import Leaderboard from './leaderboard';
-import StoryBoard from './storyboard';
+import Storyboard from './storyboard';
 import Dashboard from './dashboard';
 import cookie from 'js-cookie';
+import Submission from './submit';
 
 
 
@@ -35,7 +36,7 @@ function loginEnter(state, replace) {
      <Route path="/" component={MainComponent}>
        <IndexRoute component={Login}/>
        <Route path="/dashboard" component={Dashboard}/>
-       <Route path="/stories" component={StoryBoard}/>
+       <Route path="/stories" component={Storyboard}/>
       </Route>
       	<Route path="/dashboard" component={Dashboard}/>
        <Route path="/submission" component={Submission}/>
