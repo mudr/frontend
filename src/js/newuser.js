@@ -12,23 +12,18 @@ const style = {
   width: 100,
   margin: 20,
   textAlign: 'center',
-  display: 'inline-block'
-
-}
+  display: 'inline-block',
 
 
 export default class Login extends Component {
 	
 
 
-	// dataHandler(data) {
-	// 	if(data.user === {user.name} && data.password === {user.password}) {
-	// 		cookie.set('user', data.user);
-	// 		hashHistory.replace("/");
-	// 	} else {
-	// 		alert('Please Try Again or Create an Account');
-	// 	}
-	// };
+	dataHandler(data) {
+    info.push(data.info);
+    hashHistory.push('/');
+  }
+  
 	
 
 	// dataHandler(data) {
@@ -51,16 +46,19 @@ export default class Login extends Component {
     return (
       <div>
         <h1>Sign In</h1>
-        <SerialForm onData={this.dataHandler}>
+        <SerialForm onData={::
+          this.dataHandler}>
           <div>
             <input name="user" placeholder="Username" type="text"/>
           </div>
           <div>
             <input name="pass" placeholder="Password" type="password"/>
           </div>
+          <div>
+            <input name="email" placeholder="Email" type="text"/>
+          </div>
           <button>Sign In</button>
         </SerialForm>
-        <button> Sign Up </button>
       </div>
     )
   }
@@ -75,6 +73,6 @@ export default class Login extends Component {
 
 // </SSF>
 
-			
+			)
 	}
-
+}
