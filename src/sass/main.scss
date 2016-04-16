@@ -22,6 +22,7 @@
 	padding-top:10px;
 	padding-left:10px;
 	padding-right:10px;
+	z-index:1;
 }
 
 
@@ -41,6 +42,33 @@
 
 
 .newuser-wrapper{
-	width:100vw;
-	height:100%;
+	position:relative;
+	width:500px;
+	height:400px;
+	margin:auto;
+	border:1px solid black;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-top: 100px;
+	padding-left: 20px;
+	// padding-right:20px;
 }
+
+
+.newuser-wrapper input{
+	margin-bottom:15px;
+	width:90%;
+
+}
+
+
+.newuser-wrapper button{
+	position:absolute;
+	bottom: 30px;
+	right: 50px;
+	background-color: transparent;
+}
+
+
+
+
+
