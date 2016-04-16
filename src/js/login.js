@@ -115,7 +115,7 @@ export default class Login extends Component {
           </div>
           <button>Sign In</button>
         </SSF>
-        <Link to="/">Sign Up</Link>
+        <Link to="/newuser">Sign Up</Link>
       </div>
     )
   }

@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import cookie from 'js-cookie';
 
 
 export default class MainComponent extends Component {
+	constructor(...args) {
+		super(...args);
+		this.state = { user: cookie.get('user')}
+	}
 
 	render(){	
-
+		let {user} = this.state;
 		return(
 
 			<div className="main-wrapper">
@@ -18,7 +23,7 @@ export default class MainComponent extends Component {
 
 
 					<div className="username-password">
-						<div className="main-username">username</div>
+						<div className="main-username">{user.username}</div>
 						<div className="main-points">points</div>
 					</div>
 					<br/>

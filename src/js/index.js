@@ -37,11 +37,11 @@ function loginEnter(state, replace) {
      <Route path="/" component={MainComponent}>
        <IndexRoute component={Login}/>
        <Route path="/dashboard" component={Dashboard}/>
-       <Route path="/stories" component={Storyboard}/>
+       <Route path="/storyboard" component={Storyboard}/>
       </Route>
       	<Route path="/dashboard" component={Dashboard}/>
        <Route path="/submission" component={Submission}/>
-       <Route path="/stories" component={Storyboard}/>
+       <Route path="/storyboard" component={Storyboard}/>
       </Router>
  ), document.querySelector('.app'));
 
