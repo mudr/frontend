@@ -5,6 +5,7 @@
 $salmon: #FF4D2C;	
 $slate:  #7CB7C0;
 
+
 @mixin gradient(){
 	background: -moz-linear-gradient(left,  rgba(255,77,44,1) 0%, rgba(162,162,162,0.63) 50%, rgba(0,218,244,0.25) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(left,  rgba(255,77,44,1) 0%,rgba(162,162,162,0.63) 50%,rgba(0,218,244,0.25) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -31,9 +32,9 @@ $slate:  #7CB7C0;
 	border-radius: 5px;
 }
 
-// @mixin button-hover(){
-// 	color:$slate;
-// }
+@mixin typeface(){
+	font-family: 'Grand Hotel', cursive;
+}
 
 
 
@@ -83,7 +84,7 @@ $slate:  #7CB7C0;
 	color: $salmon;
 	padding-left:10px;
 	padding-top:5px;
-	font-family: 'Grand Hotel', cursive;
+	@include typeface;
 	font-size: 28px;
 }
 
@@ -203,17 +204,17 @@ $slate:  #7CB7C0;
 
 }
 
+.submit-title input{
+	width: 90%;
+	margin-bottom: 20px;
+
+}
 .submit-content input{
 	padding-bottom: 200px;
 	width: 90%;
 	margin-bottom: 20px;
 }
 
-.submit-title input{
-	width: 90%;
-	margin-bottom: 20px;
-
-}
 
 
 .submit-story-wrapper button{
@@ -227,7 +228,7 @@ $slate:  #7CB7C0;
 
 
 
-// STORYBOARD/////////////////////////////////
+//////STORYBOARD/////////////////////////////////
 
 
 .storyboard-wrapper{
@@ -248,8 +249,19 @@ $slate:  #7CB7C0;
 
 }
 
+.storyboard-main h3{
+	// @include typeface;
+	font-family: helvetica;
+	color: $salmon;
+	font-size: 30px;
+}
+
 .story-box{
 	// border: 2px solid $slate;
+}
+
+.story-box-title{
+	padding-bottom:20px;
 }
 
 .leaderboard{

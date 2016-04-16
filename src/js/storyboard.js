@@ -20,7 +20,7 @@ export default class Storyboard extends Component {
 		return(
 			<div className="storyboard-wrapper">
 				<div className="storyboard-main">
-					<h3>Mudr StoryBoard World</h3>
+					<h3>STORYBOARD</h3>
 
 					<div className="story-box">
 						<div className="story-box-title"> Story Title</div>
