@@ -19,7 +19,6 @@
 	height:40px;
 	background-color:#db2616;
 	border-bottom:2px solid black;
-	padding-top:10px;
 	padding-left:10px;
 	padding-right:10px;
 	z-index:1;
@@ -31,11 +30,21 @@
 }
 
 .username-password{
+	padding-top:10px;
 	width:100%;
 	display:flex;
 	justify-content:flex-end;
 }
 
+.main-points{
+	padding-left:20px;
+}
+
+.logo{
+	padding-top:5px;
+	font-family: 'Grand Hotel', cursive;
+	font-size: 28px;
+}
 
 //////////NEWUSER//////////--------------
 

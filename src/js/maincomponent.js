@@ -13,7 +13,7 @@ export default class MainComponent extends Component {
 				<div className="main-flex">
 
 					<div className="logo">
-						<span> LOGO </span>
+						<span> Müdr </span>
 					</div>
 
 
