@@ -40,7 +40,8 @@ function loginEnter(state, replace) {
         <Route path="/intro" component={Login}/>
        	<Route path="/newuser" component={NewUser}/>
        	<Route path="/dashboard" component={Dashboard}/>
-       	<Route path="/storyboard/:post_id" component={Storyboard}/>
+       	<Route path="/storyboard" component={Storyboard}/>
+     	<Route path="/storyboard/:post_id" component={Storyboard}/>
        	<Route path="/submission" component={Submission}/>
        </Route>
     </Router>

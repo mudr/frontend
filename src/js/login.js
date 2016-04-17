@@ -26,14 +26,11 @@ export default class Login extends Component {
 
   dataHandler(data) {
 		// let login = (user, pass) => {
+			console.log('loging in');
    		ajax({
        		url: 'http://mudr.herokuapp.com/login',
        		type: 'POST',
-       		data: {
-	         username: data.username,
-	         password: data.password,
-	         mood: data.mood
-	       	},
+       		data: data,
 	       	dataType: 'json',
        // cache: false,
        // processData: false,
@@ -104,7 +101,7 @@ export default class Login extends Component {
     return (
       <div className="login-wrapper">
         <h1>Log In</h1>
-        <SSF onData={this.dataHandler}>
+        <SSF onData={::this.dataHandler}>
           <div>
             <input name="username" placeholder="Username" type="text"/>
           </div>
@@ -114,10 +111,11 @@ export default class Login extends Component {
           <div>
             <input name="mood" placeholder="Mood (1-2)" type="number"/>
           </div>
-          <button className="login-button-1">Sign In</button>
+          <button className="login-button-1" type="submit">Sign In</button>
         </SSF>
 
         <Link to="/newuser"><button className="login-button-2">New Users</button></Link>
+        <Link to="/dashboard"><button className="login-button-3">Get Started!</button></Link>
 
       </div>
     )

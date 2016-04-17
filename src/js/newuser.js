@@ -42,19 +42,24 @@ export default class Login extends Component {
     formData.append('username', data.username),
     formData.append('mood', data.mood)
 
+
+    console.log('ssssssssssss');
+
     ajax({
-    url: 'http://mudr.herokuapp.com/sign_up',
-    type: 'POST',
-    data: formData,
-    dataType: 'application/json',
-    processData: false,
-    contentType: false
-  }).then(() => {
-    console.log("sucsess")
-    users.push(data.users);
-    hashHistory.push('/dashboard');
-  })
-}
+      url: 'http://mudr.herokuapp.com/sign_up',
+      type: 'POST',
+      data: formData,
+      dataType: 'application/json',
+      processData: false,
+      contentType: false
+    }).then(() => {
+      console.log("sucsess")
+      users.push(data.users);
+      hashHistory.replace('/dashboard');
+    }).fail(e => {
+      console.log('failed', e);
+    })
+  }
   
 	
 
