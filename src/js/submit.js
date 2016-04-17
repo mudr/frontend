@@ -21,6 +21,7 @@ import cookie from 'js-cookie';
  	
  	  dataHandler(data) {
  	// onData() write Dat function
+ 	console.log(data);
   
     		ajax({
         		url: 'http://mudr.herokuapp.com/posts/create',

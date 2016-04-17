@@ -26,14 +26,11 @@ export default class Login extends Component {
 
   dataHandler(data) {
 		// let login = (user, pass) => {
+			console.log('loging in');
    		ajax({
        		url: 'http://mudr.herokuapp.com/login',
        		type: 'POST',
-       		data: {
-	         username: data.username,
-	         password: data.password,
-	         mood: data.mood
-	       	},
+       		data: data,
 	       	dataType: 'json',
        // cache: false,
        // processData: false,

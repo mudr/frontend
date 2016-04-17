@@ -15,6 +15,17 @@ export default class Storyboard extends Component {
 		this.state = { posts: {} }
 	}
 
+
+componentWillMount() {
+ 		let { post_id } = this.props.params
+ 		ajax(`http://mudr.herokuapp.com/posts/create/${post_id}`).then(user => {
+ 			this.setState ({posts});
+ 		})
+ 	}
+
+
+
+
 	dataHandler(data) {
 		console.log(this.props.params)
   	let {post_id } = this.props.params;
@@ -23,7 +34,7 @@ export default class Storyboard extends Component {
   	console.log("post_id =>", post_id);
     		ajax({
         		url: `http://mudr.herokuapp.com/posts/${post_id}`,
-        		type: 'POST',//<--- GET request?
+        		type: 'GET',//<--- GET request?
         		data: data,
  	       	dataType: 'json',
  	       	headers: {
