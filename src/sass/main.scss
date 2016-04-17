@@ -141,15 +141,35 @@ $aqua: #14D3E7;
 
 
 .dropzone {
+
+	// position:relative;
 	padding-top: 25px;
 	width: 91%;
 	height:70px;
 	border:1px dotted black;
 	border-radius: 5px;
+	overflow:hidden;
 	text-align: center;
 	// padding-top: 35px;
-	// object-fit: fill;
+	// object-fit: cover;
 
+}
+.dropzone span{
+	width:100%;
+	margin:auto;
+	padding-top: 25px;
+
+}
+
+
+// figure this shit out tomorrow
+.dropzone img{
+	object-fit: fit;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
 }
 
 .dropzone:hover {
