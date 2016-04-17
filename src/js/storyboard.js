@@ -42,7 +42,7 @@ componentWillMount() {
  		       	}
 	    	}).then( () => {
 	    	this.setState = ({posts});
-	    	hashHistory.push(`/storyboard/${post_id}`);
+	    	hashHistory.push("/storyboard");
   
 	     });
  	}
