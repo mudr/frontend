@@ -9,6 +9,7 @@ import Storyboard from './storyboard';
 import Dashboard from './dashboard';
 import cookie from 'js-cookie';
 import Submission from './submit';
+import Intro from './intro';
 
 
 
@@ -35,7 +36,8 @@ function loginEnter(state, replace) {
  render((
    <Router history={hashHistory}>
      <Route path="/" component={MainComponent}>
-       <IndexRoute component={Login}/>
+       <IndexRoute component={Intro}/>
+        <Route path="/intro" component={Login}/>
        	<Route path="/newuser" component={NewUser}/>
        	<Route path="/dashboard" component={Dashboard}/>
        	<Route path="/storyboard/:post_id" component={Storyboard}/>

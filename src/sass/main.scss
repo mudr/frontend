@@ -112,6 +112,37 @@ $aqua: #14D3E7;
 	@include gradient;
 }
 
+
+//////////INTRO//////////--------------
+
+
+.intro-wrapper{
+	width:100vw;
+	height:100vh;
+	@include gradient;
+}
+
+.intro-flex{
+	padding-top: 250px;
+	display:flex;
+	justify-content:center;
+	// padding-top:150px;
+
+}
+
+.intro-logo a{
+
+	@include typeface;
+	font-size: 1000%;
+	text-decoration: none;
+	color:white;
+}
+
+.intro-logo a:hover{
+	color:$salmon;
+}
+
+
 //////////NEWUSER//////////--------------
 
 
