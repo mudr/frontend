@@ -14,8 +14,8 @@ export default class Dashboard extends Component {
 		return(
 
 			<div className="mood-select">
-
 				<span> How are you feeling today?</span>
+
 		
 				<div className="wrapper1">
 				<div className="happy-link">

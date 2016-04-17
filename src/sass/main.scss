@@ -1,8 +1,6 @@
 @import 'normalize-css/normalize';
 
 
-
-
 $salmon: #FF4D2C;	
 $slate:  #7CB7C0;
 $aqua: #14D3E7;
@@ -320,14 +318,19 @@ $aqua: #14D3E7;
 .mood-select{
 	width:100vw;
 	height:100vh;
-	@include diagnol-gradient-strict;
+	display:flex;
+	justify-content:space-around;
+	padding-top:200px;
+
+	// @include diagnol-gradient-strict;
 }
 
 .mood-select span{
 	position:absolute;
-	right:300px;
-	top:200px;
-	// font-family: helvetica;
+	margin:auto;
+	// text-align: center;
+	// width:100%;
+	top:100px;
 	@include typeface;
 	font-size: 30px;
 }
@@ -335,9 +338,9 @@ $aqua: #14D3E7;
 
 
 .wrapper1{
-	position:absolute;
-	left:200px;
-	top:100px;
+	// position:absolute;
+	// left:200px;
+	// top:100px;
 }
 
 .happy-link{
@@ -347,8 +350,8 @@ $aqua: #14D3E7;
 }
 
 .happy-link img{
-	width:400px;
-	height:400px;
+	width:300px;
+	height:300px;
 	border:2px solid $aqua;
 	border-radius: 50%;
 	object-fit:cover;
@@ -361,9 +364,9 @@ $aqua: #14D3E7;
 }
 
 .wrapper2{
-	position:absolute;
-	right:200px;
-	top:400px;
+	// position:absolute;
+	// right:200px;
+	// top:400px;
 
 }
 
@@ -373,8 +376,8 @@ $aqua: #14D3E7;
 }
 
 .sad-link img{
-	width:400px;
-	height:400px;
+	width:300px;
+	height:300px;
 	border:2px solid $salmon;
 	border-radius: 50%;
 	object-fit:cover;
@@ -387,7 +390,7 @@ $aqua: #14D3E7;
 
 .hidden1{
 	background-color: black;
-	width:100%;
+	width:300px;
 	font-size: 46px;
 	color:white;
 	position:absolute;
@@ -398,7 +401,7 @@ $aqua: #14D3E7;
 
 .hidden2{
 	background-color: black;
-	width:100%;
+	width:300px;
 	font-size: 46px;
 	color:white;
 	position:absolute;
