@@ -56,7 +56,7 @@ componentWillMount() {
 
 					<div className="story-box">
 						<div className="story-box-title"> Story Title</div>
-						<div className="story-box-title">
+						<div className="story-box-content">
 
 						</div>
 					</div>
