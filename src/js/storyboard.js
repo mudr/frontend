@@ -47,10 +47,6 @@ export default class Storyboard extends Component {
 						<div className="story-box-title"> Story Title</div>
 						<div className="story-box-title">
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b6e0b8c7de867d38e03fcc2ab5d73440d6733eb5
 						</div>
 					</div>
 				</div>
