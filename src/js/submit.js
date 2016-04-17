@@ -7,9 +7,15 @@ import cookie from 'js-cookie';
   
   
   
- 	let currentuser = cookie.get('user');
-  
+ 	let currentuser = cookie.getJSON('user');
+  	let currentAT = cookie.getJSON('auth_token');
  export default class Submission extends Component {
+ 	constructor (...args) {
+ 		super(...args);
+ 		this.state = {post: [] }
+ 	}
+
+ 	//componentWillMount() {}
  	
   
  	
@@ -22,10 +28,11 @@ import cookie from 'js-cookie';
         		data: data,
  	       	dataType: 'json',
  	       	headers: {
- 	        	  'X-Auth-Token': currentuser.auth_token
+ 	        	  'X-Auth-Token': currentAT.auth_token
  		       	}
-	    	}).then( () => {
-	    	hashHistory.replace("/storyboard");
+	    	}).then( (resp) => {
+	    		console.log(resp)
+	    	hashHistory.push("/storyboard/:post_id");
   
 	     });
  	}
@@ -58,4 +65,4 @@ import cookie from 'js-cookie';
  			)
  	}
   }
-
+//.auth_token

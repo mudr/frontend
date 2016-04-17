@@ -1,15 +1,40 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { ajax } from 'jquery';
+import SSF from 'react-simple-serial-form';
+import cookie from 'js-cookie';
 // import Happy from '.material-ui/lib/svg/social/sentiment-satisfied';
+
+
+
+let currentuser = cookie.get('user');
 
 export default class Storyboard extends Component {
 	constructor (...args) {
 		super(...args);
-		// this.state { user: {} }
+		this.state = { posts: {} }
 	}
 
+	dataHandler(data) {
+		console.log(this.props.params)
+  	let {post_id } = this.props.params;
 
+  	console.log("data", data);
+  	console.log("post_id =>", post_id);
+    		ajax({
+        		url: `http://mudr.herokuapp.com/posts/${post_id}`,
+        		type: 'POST',
+        		data: data,
+ 	       	dataType: 'json',
+ 	       	headers: {
+ 	        	  'X-Auth-Token': currentuser.auth_token
+ 		       	}
+	    	}).then( () => {
+	    	this.setState = ({posts});
+	    	hashHistory.push(`/storyboard/${post_id}`);
+  
+	     });
+ 	}
 
 
 
@@ -39,7 +64,7 @@ export default class Storyboard extends Component {
 
 
 				<div className="leaderboard">
-					<h3>leaderboard </h3>
+					<h3>LEADERBOARD</h3>
 
 
 					<ul>
@@ -48,12 +73,16 @@ export default class Storyboard extends Component {
 					<li><span>username2 score 90</span></li>
 					<li><span>username2 score 90</span></li>
 					<li><span>username2 score 90</span></li>
-
 					</ul>
-
-
-
+					
 			</div>
+			<SSF onData={::this.dataHandler}>
+				<div className="comment-box">
+				<input type="text" name="comment" placeholder="What do you think?"/>
+				</div>
+				<button> Let em' Know </button>
+			</SSF>
+
 	</div>
 
 

@@ -30,8 +30,8 @@ export default class Login extends Component {
        		url: 'http://mudr.herokuapp.com/login',
        		type: 'POST',
        		data: {
-	         username: data.user,
-	         password: data.pass,
+	         username: data.username,
+	         password: data.password,
 	         mood: data.mood
 	       	},
 	       	dataType: 'json',
@@ -50,8 +50,8 @@ export default class Login extends Component {
 	        	  'X-Auth-Token': resp.user.auth_token
 		       	}
 		     	});
-				 	cookie.set('user', resp.user);
-				 	cookie.set('auth_token', resp.user.auth_token);
+				 	cookie.set('user', {user: resp.user});
+				 	cookie.set('auth_token', {auth_token: resp.user.auth_token});
 			 		hashHistory.replace("/dashboard");
 			 	} else {
 			 		alert('Please Try Again or Create an Account');
@@ -106,10 +106,10 @@ export default class Login extends Component {
         <h1>Log In</h1>
         <SSF onData={this.dataHandler}>
           <div>
-            <input name="user" placeholder="Username" type="text"/>
+            <input name="username" placeholder="Username" type="text"/>
           </div>
           <div>
-            <input name="pass" placeholder="Password" type="password"/>
+            <input name="password" placeholder="Password" type="password"/>
           </div>
           <div>
             <input name="mood" placeholder="Mood (1-2)" type="number"/>
