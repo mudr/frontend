@@ -51,14 +51,62 @@ componentWillMount() {
  		render () {
 		return(
 			<div className="storyboard-wrapper">
+			<div className="next"><b>Next Story > </b></div>
 				<div className="storyboard-main">
 					<h3>STORYBOARD</h3>
 
 					<div className="story-box">
-						<div className="story-box-title"> Story Title</div>
+						<div className="story-box-title"><b> Story Title</b></div>
 						<div className="story-box-content">
 
+						I am a story Gochujang austin viral skateboard, 
+						chicharrones synth chambray dreamcatcher try-hard man 
+						braid ennui whatever post-ironic. Whatever freegan ethical 
+						chartreuse brooklyn. Pitchfork humblebrag iPhone, austin blog 
+						semiotics cliche flexitarian. Photo booth direct trade flannel, 
+						bespoke brunch wolf small batch poutine blue bottle. Food truck 
+						fap irony tofu, four loko neutra whatever +1 normcore. Letterpress 
+						art party trust fund selvage. Pabst dreamcatcher vegan, you probably 
+						haven't heard of them messenger bag typewriter gluten-free.
+						I am a story Gochujang austin viral skateboard, 
+						chicharrones synth chambray dreamcatcher try-hard man 
+						braid ennui whatever post-ironic. Whatever freegan ethical 
+						chartreuse brooklyn. Pitchfork humblebrag iPhone, austin blog 
+						semiotics cliche flexitarian. Photo booth direct trade flannel, 
+						bespoke brunch wolf small batch poutine blue bottle. Food truck 
+						fap irony tofu, four loko neutra whatever +1 normcore. Letterpress 
+						art party trust fund selvage. Pabst dreamcatcher vegan, you probably 
+						haven't heard of them messenger bag typewriter gluten-free.
+
 						</div>
+					</div>
+
+					<div className="comments-title"><b> Comments</b></div>
+					<div className="live-comments">
+
+					<div className="comment">
+					<b>Bobby:</b> Hashtag art party ethical, 
+					ennui letterpress cred cray roof party farm-to-table tumblr. 
+					</div>
+
+					<div className="comment">
+					<b>Sarah:</b> I am an comment, 
+					ennui cool story cred cray roof party farm-to-table tumblr. 
+					heard of them messenger bag typewriter gluten-free.
+					</div>
+
+					<div className="comment">
+					<b>Jeff:</b> I am an comment, 
+					ennui cool story cred cray roof you're cool, ttyl, hags. Pitchfork humblebrag iPhone, austin blog 
+					semiotics cliche flexitarian. Photo booth direct trade flannel, 
+					bespoke brunch wolf small batch poutine blue bottle. Food truck 
+					fap irony tofu, four loko neutra whatever +1 normcore. Letterpress 
+					art party trust fund selvage.
+					</div>
+
+
+
+
 					</div>
 
 					<SSF onData={::this.dataHandler}>

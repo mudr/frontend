@@ -309,8 +309,20 @@ $aqua: #14D3E7;
 
 //////STORYBOARD/////////////////////////////////
 
+.next{
+	position:absolute;
+	right:400px;
+	top:100px;
+	color:$salmon;
+
+}
+
+.next:hover{
+	color:$slate;
+}
 
 .storyboard-wrapper{
+	position:relative;
 	width:100vw;
 	height:100vh;
 	// background-color: $slate;
@@ -336,16 +348,46 @@ $aqua: #14D3E7;
 }
 
 .story-box{
+	box-sizing:border-box;
+	width:60vw;
 	// border: 2px solid $slate;
+	padding-bottom: 20px;
+	margin-bottom:20px;
+
 }
 
 .story-box-title{
+	font-size: 20px;
 	padding-bottom:20px;
 }
 
 
+.live-comments{
+	box-sizing:border-box;
+	padding: 10px;
+	margin-bottom:20px;
+	width:60vw;
+	border: 2px solid $slate;
+}
+
+
+.comment{
+	margin-bottom:10px;
+
+}
+// .live-comments p{
+// 	color: $aqua;
+// 	font-weight: bold;
+// }
+
+.comments-title{
+	font-size: 20px;
+	padding-bottom:20px;
+}
+
 .comment-box input{
-	width:50vw;
+
+	width:60vw;
 	padding-bottom:10vh;
 	margin-bottom: 15px;
 
@@ -405,7 +447,7 @@ $aqua: #14D3E7;
 	// text-align: center;
 	// width:100%;
 	top:100px;
-	@include typeface;
+	// @include typeface;
 	font-size: 30px;
 }
 
