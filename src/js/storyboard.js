@@ -60,6 +60,14 @@ componentWillMount() {
 
 						</div>
 					</div>
+
+					<SSF onData={::this.dataHandler}>
+						<div className="comment-box">
+							<input type="text" name="comment" placeholder="What do you think?"/>
+						</div>
+						<button> Leave Comment </button>
+					</SSF>
+	
 				</div>
 
 
@@ -76,14 +84,8 @@ componentWillMount() {
 					</ul>
 					
 			</div>
-			<SSF onData={::this.dataHandler}>
-				<div className="comment-box">
-				<input type="text" name="comment" placeholder="What do you think?"/>
-				</div>
-				<button> Let em' Know </button>
-			</SSF>
 
-	</div>
+		</div>
 
 
 
