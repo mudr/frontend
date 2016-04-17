@@ -50,8 +50,9 @@ export default class Login extends Component {
     processData: false,
     contentType: false
   }).then(() => {
+    console.log("sucsess")
     users.push(data.users);
-    hashHistory.push('/');
+    hashHistory.push('/dashboard');
   })
 }
   
@@ -99,7 +100,7 @@ export default class Login extends Component {
             </Dropzone>
           </div>
 
-           <button><b>Submit</b></button>
+           <button>Submit</button>
         </SSF>
       </div>
     )
