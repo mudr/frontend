@@ -12,10 +12,6 @@ export default class Storyboard extends Component {
 
 
 
-
-
-
-
  		render () {
 		return(
 			<div className="storyboard-wrapper">
