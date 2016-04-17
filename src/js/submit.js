@@ -22,6 +22,13 @@ import cookie from 'js-cookie';
  	  dataHandler(data) {
  	// onData() write Dat function
  	console.log(data);
+ 	let { post_id } = this.props.params;
+ 	//let formData = new formData();
+
+ 	//formData.append('title', this.title),
+ 	//formData.append('content', this.content)
+
+ 	console.log('ppppp');
   
     		ajax({
         		url: 'http://mudr.herokuapp.com/posts/create',
@@ -33,7 +40,7 @@ import cookie from 'js-cookie';
  		       	}
 	    	}).then( (resp) => {
 	    		console.log(resp)
-	    	hashHistory.push("/storyboard/:post_id");
+	    	hashHistory.replace(`/storyboard/${post_id}`);
   
 	     });
  	}
@@ -45,7 +52,7 @@ import cookie from 'js-cookie';
  			 <div className="submit-story-wrapper">
         		<h1>Share Your Story</h1>
   
-         		<SSF onData={this.dataHandler}>
+         		<SSF onData={::this.dataHandler}>
  
          			<div className="submit-title">
             			 <input name="title" placeholder="title of your story" type="text"/>
