@@ -19,7 +19,7 @@ export default class Dashboard extends Component {
 		
 				<div className="wrapper1">
 				<div className="happy-link">
-					<Link to="/storyboard">
+					<Link to="/storyboard/:post_id">
 					<div className="hidden1">HAPPY</div>
 					<img src="http://www.forex21.com/wp-content/uploads/2015/05/happy-person.png" 
 					alt="happy"/>
