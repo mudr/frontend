@@ -23,7 +23,7 @@ export default class Storyboard extends Component {
   	console.log("post_id =>", post_id);
     		ajax({
         		url: `http://mudr.herokuapp.com/posts/${post_id}`,
-        		type: 'POST',
+        		type: 'POST',//<--- GET request?
         		data: data,
  	       	dataType: 'json',
  	       	headers: {
@@ -51,12 +51,6 @@ export default class Storyboard extends Component {
 						<div className="story-box-title"> Story Title</div>
 						<div className="story-box-title">
 
-							Four dollar toast gastropub etsy, 
-							tattooed franzen deep v yuccie mumblecore 
-							schlitz cardigan meggings. Locavore selfies 
-							blog farm-to-table, vinyl you probably haven't 
-							heard of them vice chia gluten-free trust fund 
-							pork belly williamsburg.
 
 						</div>
 					</div>
