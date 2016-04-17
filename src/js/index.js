@@ -35,13 +35,13 @@ function loginEnter(state, replace) {
 
  render((
    <Router history={hashHistory}>
-     <Route path="/" component={MainComponent}>
-       <IndexRoute component={Intro}/>
-        <Route path="/login" component={Login}/>
-       	<Route path="/newuser" component={NewUser}/>
-       	<Route path="/dashboard" component={Dashboard}/>
-     	<Route path="/storyboard/:post_id" component={Storyboard}/>
+      <Route path="/" component={Intro}/>
+      <Route path="/login" component={Login}/>
+    	<Route path="/newuser" component={NewUser}/>
+     <Route path="/dashboard" component={MainComponent}>
+        <IndexRoute component={Dashboard}/>
        	<Route path="/submission" component={Submission}/>
+        <Route path="/storyboard/:post_id" component={Storyboard}/>
        </Route>
     </Router>
  ), document.querySelector('.app'));

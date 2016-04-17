@@ -19,7 +19,7 @@ export default class Intro extends Component {
 
 					<div className="intro-logo">
 							
-							<Link to="/newuser">
+							<Link to="/login">
 							Müdr
 							</Link>
 
