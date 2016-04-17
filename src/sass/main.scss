@@ -105,6 +105,11 @@ $aqua: #14D3E7;
 	font-size: 28px;
 }
 
+.logo a{
+	text-decoration: none;
+	color: $salmon;
+}
+
 
 .gradient-border{
 	width:100%;
@@ -259,7 +264,7 @@ $aqua: #14D3E7;
 .submit-story-wrapper{
 	position:relative;
 	width:500px;
-	height:600px;
+	height:500px;
 	margin:auto;
 	// background-color: $slate;
 	// border:1px solid black;
@@ -268,6 +273,13 @@ $aqua: #14D3E7;
 	padding-left: 20px;
 	padding-top:10px;
 
+}
+
+.sad-img{
+	position:absolute;
+	bottom:0;
+	right:20px;
+	// height:250px;
 }
 
 .submit-title input{

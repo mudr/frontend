@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import cookie from 'js-cookie';
+import { Link } from 'react-router';
 
 
 export default class MainComponent extends Component {
@@ -18,7 +19,7 @@ export default class MainComponent extends Component {
 				<div className="main-flex">
 
 					<div className="logo">
-						<span> Müdr </span>
+						<Link to="/dashboard"> Müdr </Link>
 					</div>
 
 

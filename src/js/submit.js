@@ -39,7 +39,8 @@ import cookie from 'js-cookie';
 
  	render(){
  		return(
- 				
+ 				<div className="submit-wrapper">
+ 			 	<img className="sad-img" src="http://images.clipartpanda.com/animated-rain-clouds-raincloud.gif" alt="sad gif"/>
  			 <div className="submit-story-wrapper">
         		<h1>Share Your Story</h1>
   
@@ -58,6 +59,7 @@ import cookie from 'js-cookie';
         		 </SSF>
  
  
+      		 </div>
       		 </div>
  
  
