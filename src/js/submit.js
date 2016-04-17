@@ -19,30 +19,29 @@ import cookie from 'js-cookie';
  	
   
  	
- 	  dataHandler(data) {
- 	// onData() write Dat function
- 	console.log(data);
- 	let { post_id } = this.props.params;
- 	//let formData = new formData();
+ 	dataHandler(data) {
+	 	// onData() write Dat function
+	 	console.log(data);
+	 	// //let { post_id } = this.props.params;
+	 	// let formData = new FormData();
 
- 	//formData.append('title', this.title),
- 	//formData.append('content', this.content)
+	 	// formData.append('title', this.title),
+	 	// formData.append('content', this.content)
 
- 	console.log('ppppp');
-  
-    		ajax({
-        		url: 'http://mudr.herokuapp.com/posts/create',
-        		type: 'POST',
-        		data: data,
- 	       	dataType: 'json',
- 	       	headers: {
- 	        	  'X-Auth-Token': currentAT.auth_token
- 		       	}
-	    	}).then( (resp) => {
-	    		console.log(resp)
-	    	hashHistory.replace(`/storyboard/${post_id}`);
-  
-	     });
+	 	console.log('ppppp');
+	  
+		ajax({
+    		url: 'http:mudr.herokuapp.com/posts/create',
+    		type: 'POST',
+    		data: data,
+       		dataType: 'aplication/json',
+       		headers: {
+        	  'X-Auth-Token': currentAT.auth_token
+	       	}
+		}).then(() => {
+    		console.log(ffff)
+    		hashHistory.push('/storyboard');
+    	});
  	}
 
  	render(){
@@ -68,7 +67,7 @@ import cookie from 'js-cookie';
  
  
       		 </div>
-      		 </div>
+      		</div>
  
  
  
